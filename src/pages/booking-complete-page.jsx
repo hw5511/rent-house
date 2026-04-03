@@ -20,7 +20,7 @@ import MobileLayout from '../components/common/mobile-layout.jsx';
  * <Route path="/booking-complete/:reservationId" element={<BookingCompletePage />} />
  */
 function BookingCompletePage() {
-  const { reservationId } = useParams();
+  const { id: reservationId } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
 

@@ -46,7 +46,7 @@ function CancelReservationPage() {
     setIsSubmitting(true);
     const { error } = await supabase
       .from('reservations')
-      .update({ status: 'cancelled', cancel_reason: reason })
+      .update({ status: 'cancelled', message: reason })
       .eq('id', id);
 
     setIsSubmitting(false);

@@ -280,14 +280,14 @@ function BookingPage() {
     const { data, error } = await supabase
       .from('reservations')
       .insert({
-        space_id: id,
+        space_id: Number(id),
         user_id: user.id,
         check_in: checkIn.toISOString().split('T')[0],
         check_out: checkOut.toISOString().split('T')[0],
-        guest_count: guestCount,
-        special_requests: specialRequests,
+        guests: guestCount,
+        message: specialRequests,
         total_price: totalPrice,
-        status: 'confirmed',
+        status: 'upcoming',
       })
       .select()
       .single();

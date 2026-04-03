@@ -168,7 +168,7 @@ function ReservationDetailPage() {
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
           <PersonIcon sx={{ fontSize: 18, color: '#A25987' }} />
           <Typography sx={{ fontSize: '0.9rem', color: '#333' }}>
-            게스트 {reservation.guest_count || 1}명
+            게스트 {reservation.guests || 1}명
           </Typography>
         </Box>
 
@@ -285,7 +285,7 @@ function ReservationDetailPage() {
               취소된 예약입니다
             </Typography>
             <Typography sx={{ fontSize: '0.8rem', color: '#999' }}>
-              취소 사유: {reservation.cancel_reason || '사유 없음'}
+              취소 사유: {reservation.message || '사유 없음'}
             </Typography>
           </Box>
         )}
