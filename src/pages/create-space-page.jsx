@@ -111,7 +111,7 @@ function CreateSpacePage() {
           location: location.trim(),
           max_guests: maxGuests,
           space_type: spaceType,
-          amenities: JSON.stringify(selectedAmenities),
+          amenities: selectedAmenities,
           rules: rules.trim(),
           rating_avg: 0,
           review_count: 0,
