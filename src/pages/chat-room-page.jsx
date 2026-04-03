@@ -21,7 +21,7 @@ import { supabase } from '../utils/supabase.js';
  */
 function ChatRoomPage() {
   const navigate = useNavigate();
-  const { roomId } = useParams();
+  const { id: roomId } = useParams();
   const { user } = useAuth();
   const messagesEndRef = useRef(null);
   const [messages, setMessages] = useState([]);
