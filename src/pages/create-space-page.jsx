@@ -84,6 +84,7 @@ function CreateSpacePage() {
     if (!title.trim()) return '숙소 이름을 입력해주세요.';
     if (!spaceType) return '공간 유형을 선택해주세요.';
     if (!pricePerNight || Number(pricePerNight) <= 0) return '1박 가격을 입력해주세요.';
+    if (Number(pricePerNight) > 100000000) return '1박 가격은 1억원 이하로 입력해주세요.';
     if (!location.trim()) return '주소를 입력해주세요.';
     if (!description.trim()) return '숙소 설명을 입력해주세요.';
     if (images.length === 0) return '최소 1장의 이미지를 업로드해주세요.';
