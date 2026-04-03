@@ -48,6 +48,18 @@ function LoginPage() {
         profile_image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop',
         bio: '여행을 좋아하는 자유로운 영혼',
         language: 'ko',
+        role: 'guest',
+      });
+      navigate('/home');
+    } else if (email === 'host@test.com' && password === '1234') {
+      login({
+        id: 8,
+        email,
+        nickname: '호스트체험',
+        profile_image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop',
+        bio: '공간대여 호스트 체험 계정입니다',
+        language: 'ko',
+        role: 'host',
       });
       navigate('/home');
     } else {
@@ -200,8 +212,11 @@ function LoginPage() {
             mb: 3,
           }}
         >
-          <Typography sx={{ fontSize: '0.8rem', color: '#666', textAlign: 'center' }}>
-            데모 계정: demo@test.com / 1234
+          <Typography sx={{ fontSize: '0.8rem', color: '#666', textAlign: 'center', mb: 0.5 }}>
+            게스트 체험: demo@test.com / 1234
+          </Typography>
+          <Typography sx={{ fontSize: '0.8rem', color: '#A25987', textAlign: 'center', fontWeight: 600 }}>
+            호스트 체험: host@test.com / 1234
           </Typography>
         </Box>
 

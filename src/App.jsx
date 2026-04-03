@@ -22,6 +22,7 @@ import NotificationSettingsPage from './pages/notification-settings-page.jsx';
 import FaqPage from './pages/faq-page.jsx';
 import TermsPage from './pages/terms-page.jsx';
 import NotificationsPage from './pages/notifications-page.jsx';
+import CreateSpacePage from './pages/create-space-page.jsx';
 import NotFoundPage from './pages/not-found-page.jsx';
 
 /**
@@ -57,6 +58,7 @@ function App() {
         <Route path="/reservation/:id" element={<PrivateRoute><ReservationDetailPage /></PrivateRoute>} />
         <Route path="/reservation/:id/cancel" element={<PrivateRoute><CancelReservationPage /></PrivateRoute>} />
         <Route path="/reservation/:id/review" element={<PrivateRoute><WriteReviewPage /></PrivateRoute>} />
+        <Route path="/create-space" element={<PrivateRoute><CreateSpacePage /></PrivateRoute>} />
         <Route path="/chat" element={<PrivateRoute><ChatListPage /></PrivateRoute>} />
         <Route path="/chat/:id" element={<PrivateRoute><ChatRoomPage /></PrivateRoute>} />
         <Route path="/mypage" element={<PrivateRoute><MyPage /></PrivateRoute>} />
